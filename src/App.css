@@ -40,3 +40,12 @@
 .read-the-docs {
   color: #888;
 } */
+.normal-color{
+  color: blue;
+  cursor: pointer;
+}
+.active-color{
+  color: green;
+  font-weight: 700;
+  cursor: pointer;
+}

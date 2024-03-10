@@ -13,28 +13,25 @@ const Step3 = (props) => {
   }
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("Step3"))
-    console.log("det", data)
-
     setCity(data?.city)
     setGender(data?.gender)
   }, [])
 
   return (
     <>
-      <div className='' style={{ border: '1px solid black', width: '800px', padding: '20px' }}>
+      <div className="border p-5 w-100 maxw-800px" >
         <Form onSubmit={e => handleSubmit(e)}>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>City</Form.Label>
-            <Form.Control type="text" placeholder="Full Name" value={city} onChange={(e) => setCity(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Your City." value={city} onChange={(e) => setCity(e.target.value)} />
           </Form.Group>
           <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
             <Form.Label>Gender</Form.Label>
-            <Form.Control type="text" placeholder="Email" value={gender} onChange={(e) => setGender(e.target.value)} />
+            <Form.Control type="text" placeholder="Enter Your Gender." value={gender} onChange={(e) => setGender(e.target.value)} />
           </Form.Group>
-          <div className=' text-center'>
-            <button className='btn btn-primary text-center' onClick={()=>props.setNext(2)}>Previous</button>
+          <div className='d-flex justify-content-center gap-5'>
+            <button className='btn btn-primary text-center' onClick={() => props.setNext(2)}>Previous</button>
             <button className='btn btn-primary text-center' type='submit'>Next</button>
-
           </div>
         </Form>
 

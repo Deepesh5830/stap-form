@@ -14,7 +14,6 @@ const Preview = (props) => {
 
     setName(data1?.name)
     setEmail(data1?.email)
-
     setMobile(data2?.mobile)
     setAddress(data2?.address)
     setCity(data3?.city)
@@ -26,18 +25,22 @@ const Preview = (props) => {
     props.setNext(1)
   }
   return (
-    <div>
-      <div>
-        <h3>{name}</h3>
-        <h3>{email}</h3>
-        <h3>{mobile}</h3>
-        <h3>{address}</h3>
-        <h3>{city}</h3>
-        <h3>{gender}</h3>
-
-
+    <div className="border p-5 w-100 maxw-800px" >
+      <div className='d-flex flex-wrap justify-content-between gap-3'>
+        <h5 className='border border-pink p-3 rounded-3'>Name : {name}</h5>
+        <h5 className='border border-pink p-3 rounded-3'>Email : {email}</h5>
       </div>
-      <button className='btn btn-primary' onClick={() => clearItem()}>save</button>
+      <div className='d-flex flex-wrap  justify-content-between gap-3'>
+        <h5 className='border border-pink p-3 rounded-3'>Mobile : {mobile}</h5>
+        <h5 className='border border-pink p-3 rounded-3'>Address : {address}</h5>
+      </div>
+      <div className='d-flex flex-wrap  justify-content-between gap-3'>
+        <h5 className='border border-pink p-3 rounded-3'>City : {city}</h5>
+        <h5 className='border border-pink p-3 rounded-3'>Gender : {gender}</h5>
+      </div>
+      <div className='text-center'>
+        <button className='btn btn-primary' onClick={() => clearItem()}>Go To Home</button>
+      </div>
     </div>
   )
 }
